@@ -1,0 +1,20 @@
+---
+- name: download go src
+  get_url: url=http://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz dest=/tmp
+  tags: go
+
+- name: extract go src
+  sudo: yes
+  unarchive: src=/tmp/go{{ go_version }}.linux-amd64.tar.gz dest=/usr/local copy=no
+  tags: go
+
+- name: add go/bin to path
+  sudo: yes
+  lineinfile:
+    dest=/etc/profile
+    line="export PATH=$PATH:/usr/local/go/bin"
+    regexp="^export PATH=\\$PATH:/usr/local/go/bin"
+    state=present
+    insertafter=EOF
+    create=yes
+  tags: go

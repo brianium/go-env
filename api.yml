@@ -1,0 +1,5 @@
+---
+- hosts: api
+  roles:
+    - common
+    - go

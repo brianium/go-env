@@ -1,0 +1,10 @@
+---
+- name: install git
+  sudo: yes
+  apt: name=git update_cache=yes state=latest
+  tags: common
+
+- name: install mercurial
+  sudo: yes
+  apt: name=mercurial state=latest
+  tags: common

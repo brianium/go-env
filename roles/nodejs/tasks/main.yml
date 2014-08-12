@@ -1,0 +1,10 @@
+---
+- name: install nodejs
+  sudo: yes
+  apt: name=nodejs update_cache=yes state=latest
+  tags: nodejs
+
+- name: install npm
+  sudo: yes
+  apt: name=npm state=latest
+  tags: nodejs
