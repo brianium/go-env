@@ -1,0 +1,7 @@
+synced_folders:
+  api_client:
+    src: "/Users/brian/projects/api-client"
+    dest: "/home/vagrant/client"
+  go_api:
+    src: "/Users/brian/projects/go-api"
+    dest: "/home/vagrant/api"
