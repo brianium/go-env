@@ -45,6 +45,11 @@ vagrant ssh go_api
 
 As staging and production hosts are added, the `ansible-playbook` command can be used to provision those remote environments as well.
 
+###Vagrant configuration
+You can rename the `vagrant.config.yml.sample` file to `vagrant.config.yml` if you want to configure the vagrant environment further. 
+
+Currently the only option that can be configured is the vagrant `synced_folders` option for both the api_client and go_api vms.
+
 WIP
 ---
 This is very much a work in progress, and will grow as our infrastructure needs are fleshed out. However, this will already serve as a good starting point for spinning up a server/client environment.
